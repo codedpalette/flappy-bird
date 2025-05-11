@@ -1,0 +1,33 @@
+[gd_scene load_steps=5 format=3 uid="uid://bgwvcwq66ybkd"]
+
+[ext_resource type="Texture2D" uid="uid://du8ydi17n6n5i" path="res://assets/sprites/background-day.png" id="1_bkp1e"]
+[ext_resource type="Script" uid="uid://dxrx043ms7yov" path="res://scripts/background.gd" id="1_jougr"]
+[ext_resource type="Texture2D" uid="uid://cpmxtjeb06bcp" path="res://assets/sprites/base.png" id="2_y0upk"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_jougr"]
+size = Vector2(288, 112)
+
+[node name="Background" type="Node2D"]
+script = ExtResource("1_jougr")
+
+[node name="BackgroundSprite" type="Sprite2D" parent="."]
+position = Vector2(144, 256)
+texture = ExtResource("1_bkp1e")
+
+[node name="Base" type="Node2D" parent="."]
+position = Vector2(-3, -4)
+metadata/_edit_group_ = true
+
+[node name="Left" type="Sprite2D" parent="Base"]
+position = Vector2(0, 484)
+texture = ExtResource("2_y0upk")
+
+[node name="Right" type="Sprite2D" parent="Base"]
+position = Vector2(336, 484)
+texture = ExtResource("2_y0upk")
+
+[node name="StaticBody2D" type="StaticBody2D" parent="Base"]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Base/StaticBody2D"]
+position = Vector2(147, 484)
+shape = SubResource("RectangleShape2D_jougr")
