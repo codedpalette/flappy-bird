@@ -1,7 +1,7 @@
 extends Node2D
 
-@onready var baseRight: Sprite2D = $"Base/Right"
-@onready var baseLeft: Sprite2D = $"Base/Left"
+@onready var baseRight: Sprite2D = $Base/Right
+@onready var baseLeft: Sprite2D = $Base/Left
 @onready var texture: Texture2D = baseRight.texture
 @onready var texture_width = texture.get_size().x
 @onready var viewport_width = get_viewport_rect().size.x
