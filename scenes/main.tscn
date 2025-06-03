@@ -2,7 +2,7 @@
 
 [ext_resource type="PackedScene" uid="uid://bgwvcwq66ybkd" path="res://scenes/background.tscn" id="1_o5qli"]
 [ext_resource type="PackedScene" uid="uid://vcrb12lab7uu" path="res://scenes/player.tscn" id="2_0wfyh"]
-[ext_resource type="PackedScene" uid="uid://cl7xjvc1yf11x" path="res://scenes/pipe.tscn" id="3_sugp2"]
+[ext_resource type="PackedScene" uid="uid://cl7xjvc1yf11x" path="res://scenes/pipes.tscn" id="3_sugp2"]
 
 [node name="Main" type="Node2D"]
 
@@ -11,5 +11,5 @@
 [node name="Player" parent="." instance=ExtResource("2_0wfyh")]
 position = Vector2(64, 256)
 
-[node name="Pipe" parent="." instance=ExtResource("3_sugp2")]
-position = Vector2(173, 450)
+[node name="PipePair" parent="." instance=ExtResource("3_sugp2")]
+position = Vector2(206, 242)
