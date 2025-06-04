@@ -1,7 +1,7 @@
 [gd_scene load_steps=4 format=3 uid="uid://b7o62jkp31hnk"]
 
-[ext_resource type="Script" uid="uid://2svwbcudxign" path="res://scripts/floor.gd" id="1_kuqtn"]
-[ext_resource type="Texture2D" uid="uid://cpmxtjeb06bcp" path="res://assets/sprites/base.png" id="1_ukw5w"]
+[ext_resource type="Script" uid="uid://dig76abr16vyn" path="res://scenes/background/floor.gd" id="1_btqe5"]
+[ext_resource type="Texture2D" uid="uid://cpmxtjeb06bcp" path="res://assets/sprites/base.png" id="2_7fle0"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_kuqtn"]
 size = Vector2(336, 109)
@@ -10,11 +10,11 @@ size = Vector2(336, 109)
 z_index = 1
 
 [node name="Floor" type="Parallax2D" parent="."]
-script = ExtResource("1_kuqtn")
+script = ExtResource("1_btqe5")
 
 [node name="Sprite" type="Sprite2D" parent="Floor"]
 position = Vector2(168, 56)
-texture = ExtResource("1_ukw5w")
+texture = ExtResource("2_7fle0")
 
 [node name="FloorCollider" type="StaticBody2D" parent="."]
 position = Vector2(168, 56)

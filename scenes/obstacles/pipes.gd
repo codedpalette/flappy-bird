@@ -23,6 +23,7 @@ func _ready():
 
 func _process(delta):
 	position.x -= speed * delta
+	# FIXME: Jittery movement
 	#position = position.snapped(Vector2.ONE)
 	if position.x < -texture_width:
 		position.x = viewport_width
