@@ -1,0 +1,16 @@
+[gd_scene load_steps=3 format=3 uid="uid://bjokr004bgxk7"]
+
+[ext_resource type="Script" uid="uid://ctnab0bvhg324" path="res://scenes/obstacles/pipe_pair.gd" id="1_xcd68"]
+[ext_resource type="PackedScene" uid="uid://bd7betshdvyri" path="res://scenes/obstacles/pipe.tscn" id="3_g165u"]
+
+[node name="PipePair" type="Node2D"]
+scale = Vector2(0.998197, 1)
+script = ExtResource("1_xcd68")
+metadata/_edit_group_ = true
+
+[node name="PipeTop" parent="." instance=ExtResource("3_g165u")]
+position = Vector2(0, -160)
+scale = Vector2(1, -1)
+
+[node name="PipeBottom" parent="." instance=ExtResource("3_g165u")]
+position = Vector2(0, 160)
