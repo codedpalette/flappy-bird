@@ -8,7 +8,6 @@ extends Node2D
 	get:
 		return gap
 	set(value):
-		# FIXME: Not working when launching from vscode
 		if is_node_ready():
 			var old_gap = gap
 			$PipeTop.position.y += (old_gap - value) / 2
