@@ -21,8 +21,8 @@ func _ready():
 	$PipeTop.position.y -= gap / 2
 	$PipeBottom.position.y += gap / 2
 
-func _physics_process(delta):
+func _process(delta):
 	position.x -= speed * delta
-	position = position.snapped(Vector2.ONE)
+	#position = position.snapped(Vector2.ONE)
 	if position.x < -texture_width:
 		position.x = viewport_width
