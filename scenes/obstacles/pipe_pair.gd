@@ -1,28 +1,29 @@
 extends Node2D
 
-@onready var sprite: Sprite2D = $PipeTop/Sprite2D
-@onready var texture_width = sprite.texture.get_size().x
+const SPEED = 100
+@onready var visible_notifier: VisibleOnScreenNotifier2D = $VisibleOnScreenNotifier2D
+@onready var pipe_top: Node2D = $PipeTop
+@onready var pipe_bottom: Node2D = $PipeBottom
+@onready var starting_positions: Array[float] = [pipe_top.position.y, pipe_bottom.position.y]
 @onready var viewport_width = get_viewport_rect().size.x
-
-@export_range(10.0, 100.0, 1.0) var gap = 50.0:
-	get:
-		return gap
+@export_range(0.0, 100.0, 1.0) var gap = 50.0:
 	set(value):
-		if is_node_ready():
-			var old_gap = gap
-			$PipeTop.position.y += (old_gap - value) / 2
-			$PipeBottom.position.y -= (old_gap - value) / 2
 		gap = value
-		
-var speed: float = 100
+		if is_node_ready(): update_gap()
+var exited: bool = false
+
+func update_gap():
+	pipe_top.position.y = starting_positions[0] - gap / 2
+	pipe_bottom.position.y = starting_positions[1] + gap / 2
 
 func _ready():
-	$PipeTop.position.y -= gap / 2
-	$PipeBottom.position.y += gap / 2
+	visible_notifier.connect("screen_exited", func(): exited = true)
+	update_gap()
 
-func _process(delta):
-	position.x -= speed * delta
-	# FIXME: Jittery movement
-	#position = position.snapped(Vector2.ONE)
-	if position.x < -texture_width:
+
+func _physics_process(delta):
+	position.x -= SPEED * delta
+	position = position.snapped(Vector2.ONE)
+	if exited:
 		position.x = viewport_width
+		exited = false
