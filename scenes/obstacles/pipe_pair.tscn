@@ -9,11 +9,9 @@ script = ExtResource("1_xcd68")
 metadata/_edit_group_ = true
 
 [node name="PipeTop" parent="." instance=ExtResource("3_g165u")]
-position = Vector2(0, -160)
 scale = Vector2(1, -1)
 
 [node name="PipeBottom" parent="." instance=ExtResource("3_g165u")]
-position = Vector2(0, 160)
 
 [node name="VisibleOnScreenNotifier2D" type="VisibleOnScreenNotifier2D" parent="."]
 rect = Rect2(-26, -320, 52, 640)

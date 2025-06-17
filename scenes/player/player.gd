@@ -9,3 +9,5 @@ func _physics_process(delta):
     if Input.is_action_just_pressed("jump"):
         velocity.y = - jump_velocity
     move_and_slide()
+
+# FIXME: Detect collision
