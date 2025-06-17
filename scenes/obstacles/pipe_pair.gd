@@ -10,19 +10,15 @@ const SPEED = 100
 var gap = 50.0:
 	set(value):
 		gap = value
-		update_gap()
-var _exited: bool = false
+		if is_node_ready(): update_gap()
+
 
 func update_gap():
 	pipe_top.position.y = - gap / 2
 	pipe_bottom.position.y = gap / 2
 
 func _ready():
-	visible_notifier.connect("screen_exited", func(): _exited = true)
 	update_gap()
 
 func _physics_process(delta):
 	position.x -= SPEED * delta
-	if _exited:
-		position.x = 0
-		_exited = false

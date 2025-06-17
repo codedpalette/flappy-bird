@@ -26,6 +26,7 @@ animations = [{
 size = Vector2(30, 20)
 
 [node name="Player" type="CharacterBody2D"]
+floor_block_on_wall = false
 script = ExtResource("1_lvxji")
 metadata/_edit_group_ = true
 

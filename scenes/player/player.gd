@@ -8,6 +8,6 @@ func _physics_process(delta):
     # TODO: Variable jump height
     if Input.is_action_just_pressed("jump"):
         velocity.y = - jump_velocity
-    move_and_slide()
-
-# FIXME: Detect collision
+    var collisions := move_and_collide(velocity * delta)
+    if collisions:
+        print("Collided with ", collisions.get_collider().name)

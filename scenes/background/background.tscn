@@ -4,7 +4,6 @@
 [ext_resource type="PackedScene" uid="uid://b7o62jkp31hnk" path="res://scenes/background/floor.tscn" id="2_rsf5d"]
 
 [node name="Background" type="Node2D"]
-metadata/_edit_group_ = true
 
 [node name="BackgroundSprite" type="Sprite2D" parent="."]
 position = Vector2(144, 256)
