@@ -15,10 +15,22 @@ run/main_scene="uid://jwm34v2vt6hx"
 config/features=PackedStringArray("4.4", "GL Compatibility")
 config/icon="res://icon.svg"
 
+[autoload]
+
+Events="*res://systems/autoloads/events.gd"
+
+[debug]
+
+gdscript/warnings/unused_signal=0
+
 [display]
 
 window/size/viewport_width=288
 window/size/viewport_height=512
+
+[global_group]
+
+player=""
 
 [input]
 

@@ -25,8 +25,8 @@ animations = [{
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_qhqgy"]
 size = Vector2(30, 20)
 
-[node name="Player" type="CharacterBody2D"]
-floor_block_on_wall = false
+[node name="Player" type="CharacterBody2D" groups=["player"]]
+z_index = 2
 script = ExtResource("1_lvxji")
 metadata/_edit_group_ = true
 
