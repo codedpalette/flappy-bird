@@ -1,6 +1,6 @@
 [gd_scene load_steps=7 format=3 uid="uid://vcrb12lab7uu"]
 
-[ext_resource type="Script" uid="uid://da5ufklatwhht" path="res://scenes/player/player.gd" id="1_lvxji"]
+[ext_resource type="Script" uid="uid://da5ufklatwhht" path="res://systems/player/player.gd" id="1_lvxji"]
 [ext_resource type="Texture2D" uid="uid://b8pmvp00muxhv" path="res://assets/sprites/redbird-downflap.png" id="2_p47bc"]
 [ext_resource type="Texture2D" uid="uid://dp7mbqxkoexy5" path="res://assets/sprites/redbird-midflap.png" id="3_75vfm"]
 [ext_resource type="Texture2D" uid="uid://f33rb1ldduv5" path="res://assets/sprites/redbird-upflap.png" id="4_0owmy"]

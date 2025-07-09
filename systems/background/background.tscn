@@ -1,7 +1,7 @@
 [gd_scene load_steps=3 format=3 uid="uid://bgwvcwq66ybkd"]
 
 [ext_resource type="Texture2D" uid="uid://du8ydi17n6n5i" path="res://assets/sprites/background-day.png" id="1_pesyb"]
-[ext_resource type="PackedScene" uid="uid://b7o62jkp31hnk" path="res://scenes/background/floor.tscn" id="2_rsf5d"]
+[ext_resource type="PackedScene" uid="uid://b7o62jkp31hnk" path="res://systems/background/floor.tscn" id="2_rsf5d"]
 
 [node name="Background" type="Node2D"]
 

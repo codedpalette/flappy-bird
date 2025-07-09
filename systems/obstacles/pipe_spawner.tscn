@@ -1,6 +1,6 @@
 [gd_scene load_steps=2 format=3 uid="uid://cwx8qjuq1ww8h"]
 
-[ext_resource type="Script" uid="uid://bmv843fv3lus4" path="res://scenes/obstacles/pipe_spawner.gd" id="1_2rwt3"]
+[ext_resource type="Script" uid="uid://bmv843fv3lus4" path="res://systems/obstacles/pipe_spawner.gd" id="1_2rwt3"]
 
 [node name="PipeSpawner" type="Node2D"]
 script = ExtResource("1_2rwt3")

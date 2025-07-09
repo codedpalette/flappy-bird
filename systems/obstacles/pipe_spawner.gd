@@ -1,7 +1,7 @@
 extends Node2D
 
 # TODO: Make this a pool to space out the pipes
-var pipe_pair: PipePair = preload("res://scenes/obstacles/pipe_pair.tscn").instantiate()
+var pipe_pair: PipePair = preload("res://systems/obstacles/pipe_pair.tscn").instantiate()
 @export_range(0.0, 100.0, 1.0) var gap = 50.0:
 	set(value):
 		gap = value
