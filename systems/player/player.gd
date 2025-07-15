@@ -12,7 +12,7 @@ func _ready():
 func _physics_process(delta):
     _velocity.y += gravity_force * delta
     if Input.is_action_just_pressed("jump"):
-        _velocity.y = jump_velocity * -1
+        _velocity.y = - jump_velocity
     position += _velocity * delta
 
 func _on_area_entered(area: Area2D):

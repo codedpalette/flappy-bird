@@ -1,5 +1,4 @@
 extends Node2D
-
 class_name PipePair
 
 const SPEED = 100
@@ -7,14 +6,12 @@ const SPEED = 100
 @onready var pipe_top: Area2D = $PipeTop
 @onready var pipe_bottom: Area2D = $PipeBottom
 
-var gap = 50.0:
+var gap:
 	set(value):
 		gap = value
-		if is_node_ready(): _update_gap()
-
+		_update_gap()
 
 func _ready():
-	_update_gap()
 	Events.died.connect(set_physics_process.bind(false))
 
 func _physics_process(delta):
