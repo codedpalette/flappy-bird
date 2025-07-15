@@ -30,7 +30,7 @@ window/size/viewport_height=512
 
 [global_group]
 
-player=""
+obstacles=""
 
 [input]
 

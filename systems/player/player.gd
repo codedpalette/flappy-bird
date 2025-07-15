@@ -1,15 +1,20 @@
-extends CharacterBody2D
+extends Area2D
 
 @export_range(1.0, 300.0, 1.0) var jump_velocity: float = 160.0
-@export_range(10.0, 1000.0, 1.0) var gravity: float = 500.0
+@export_range(10.0, 1000.0, 1.0) var gravity_force: float = 500.0
+
+var _velocity: Vector2 = Vector2.ZERO
 
 func _ready():
+    area_entered.connect(_on_area_entered)
     Events.died.connect(set_physics_process.bind(false))
 
 func _physics_process(delta):
-    velocity.y += gravity * delta
-    # TODO: Variable jump height
+    _velocity.y += gravity_force * delta
     if Input.is_action_just_pressed("jump"):
-        velocity.y = - jump_velocity
-    move_and_collide(velocity * delta)
-    # TODO: Use area2d for hitbox
+        _velocity.y = jump_velocity * -1
+    position += _velocity * delta
+
+func _on_area_entered(area: Area2D):
+    if area.is_in_group("obstacles"):
+        Events.died.emit()

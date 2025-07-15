@@ -1,6 +1,5 @@
 extends Node2D
 
-# TODO: Make this a pool to space out the pipes
 var pipe_pair: PipePair = preload("res://systems/obstacles/pipe_pair.tscn").instantiate()
 @export_range(0.0, 100.0, 1.0) var gap = 50.0:
 	set(value):
@@ -18,4 +17,4 @@ func _pipe_exited():
 
 
 func _get_random_vertical_position():
-	return randf_range(100, 300) # TODO: Calculate range based on tube sprite height and gap
+	return randf_range(100, 300)

@@ -25,8 +25,9 @@ animations = [{
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_qhqgy"]
 size = Vector2(30, 20)
 
-[node name="Player" type="CharacterBody2D" groups=["player"]]
+[node name="Player" type="Area2D"]
 z_index = 2
+gravity = 500.0
 script = ExtResource("1_lvxji")
 metadata/_edit_group_ = true
 

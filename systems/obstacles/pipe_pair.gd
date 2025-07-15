@@ -15,8 +15,6 @@ var gap = 50.0:
 
 func _ready():
 	_update_gap()
-	pipe_top.body_entered.connect(_on_body_entered)
-	pipe_bottom.body_entered.connect(_on_body_entered)
 	Events.died.connect(set_physics_process.bind(false))
 
 func _physics_process(delta):
@@ -25,7 +23,3 @@ func _physics_process(delta):
 func _update_gap():
 	pipe_top.position.y = - gap / 2
 	pipe_bottom.position.y = gap / 2
-
-func _on_body_entered(body: Node2D):
-	if body.is_in_group("player"):
-		Events.died.emit()
