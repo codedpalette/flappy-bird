@@ -31,6 +31,7 @@ window/size/viewport_height=512
 [global_group]
 
 obstacles=""
+score=""
 
 [input]
 
