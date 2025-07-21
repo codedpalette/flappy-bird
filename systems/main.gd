@@ -1,5 +1,5 @@
 extends Node2D
-
+    
 enum State {PLAYING, PAUSED, GAME_OVER}
 
 @onready var ui: UI = $UI
@@ -17,7 +17,7 @@ func _on_died():
 
 func _on_scored():
     score += 1
-    print("score: ", score)
+    ui.update_score(score)
 
 func _on_restart_game():
     get_tree().reload_current_scene()
