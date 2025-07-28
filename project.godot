@@ -27,6 +27,7 @@ gdscript/warnings/unused_signal=0
 
 window/size/viewport_width=288
 window/size/viewport_height=512
+window/dpi/allow_hidpi=false
 
 [global_group]
 
